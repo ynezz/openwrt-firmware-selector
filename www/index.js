@@ -276,6 +276,10 @@ function setupAutocompleteList(input, items, as_list, onbegin, onend) {
 
 // for attended sysupgrade
 function updatePackageList(version, target) {
+  if (config.asu_default_packages) {
+    $('packages').innerText = config.asu_default_packages.join(' ');
+  }
+
   // set available packages
   fetch(config.asu_url + '/' + config.versions[version] + '/' + target +  '/index.json')
   .then(response => response.json())

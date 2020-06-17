@@ -11,5 +11,6 @@ var config = {
   },
   // Build custom images
   // See https://github.com/aparcar/asu
-  //asu_url: 'https://chef.libremesh.org'
+  //asu_url: 'https://chef.libremesh.org',
+  //asu_default_packages: ['luci']
 };
